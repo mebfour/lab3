@@ -2,12 +2,13 @@ package classes;
 
 
 import abstractclasses.Person;
+import enums.Season;
 import interfaces.Student;
-
-
 import java.util.Random;
 
-import static classes.Story.getThemes;
+import static records.Story.*;
+
+
 
 public final class Apprentice extends Person implements Student {
 
@@ -31,7 +32,19 @@ public final class Apprentice extends Person implements Student {
             if (this.getSoul() < 9) this.setSoul(this.getSoul() + toStudy());
             studystatus = false;
         }
-    };
+    }
+
+    @Override
+    public void cleanUp(Season s) {
+        System.out.print(this.getName() );
+        switch (s){
+            case WINTER -> System.out.print(" чистит снег.");
+            case SPRING, AUTUMN -> System.out.print(" убирает листья. ");
+            case SUMMER -> System.out.print(" подметает пыль. ");
+        }
+    }
+
+    ;
 
 }
 

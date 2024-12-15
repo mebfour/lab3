@@ -2,8 +2,9 @@ package classes;
 
 import abstractclasses.Person;
 import interfaces.Teacher;
-import static classes.Story.*;
 import java.util.Random;
+
+import static records.Story.*;
 
 public final class Mentor extends Person implements Teacher {
 
@@ -39,7 +40,7 @@ public final class Mentor extends Person implements Teacher {
     public void toPreach(Apprentice p) {
         Random random = new Random();
         int n = random.nextInt(3);
-        System.out.println("Это n"+n);
+
         int result = 0;
         System.out.print(this.getName() + " рассказывает" + getSermons(n)+ ". ");
         result += (int) n/2;
@@ -48,7 +49,7 @@ public final class Mentor extends Person implements Teacher {
                 System.out.print("В продолжение беседы разговор заходит" + getproSermons(n)+ ". "); //лямбда-оператор делает автобрейк
                 result+=n;
             }
-            case 2, 3 -> {
+            case 2-> {
                 System.out.print("В продолжение беседы разговор заходит" + getproSermons(n)+ ". ");
                 result+=n;
             }

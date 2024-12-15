@@ -2,7 +2,9 @@ import classes.*;
 import enums.CharacterProximity;
 import enums.CharacterState;
 import enums.RelationshipStatus;
+import enums.Season;
 import interfaces.God;
+import static records.Story.*;
 
 import static classes.Jesus.jesus;
 import static interfaces.God.toBeWitness;
@@ -49,6 +51,7 @@ public class Test {
         //  можно в целом вывести все параметры - у кого какая душа, состояние мира и проч и проч
         friday.toPray();
         rob.toPray();
+        friday.cleanUp(Season.WINTER);
 
 
     }

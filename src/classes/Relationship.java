@@ -4,8 +4,10 @@ import abstractclasses.Person;
 import enums.CharacterProximity;
 import enums.CharacterState;
 import enums.RelationshipStatus;
-import static classes.Story.getThemes;
+
 import java.util.Random;
+
+import static records.Story.getThemes;
 
 
 public class Relationship {

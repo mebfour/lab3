@@ -2,6 +2,7 @@ package abstractclasses;
 
 
 import enums.CharacterState;
+import enums.Season;
 
 public abstract class Person {
     private String name = "Anonymous";
@@ -35,6 +36,7 @@ public abstract class Person {
         this.setCharacterState(newState);
         System.out.print(this.getName()+' '+this.getCharacterState()+ ". ");
     }
+    public void cleanUp(Season s) {};
 
 
     @Override
