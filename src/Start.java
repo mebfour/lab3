@@ -20,6 +20,8 @@ public class Start {
         Mentor rob = new Mentor("Робинзон", 5, 4);
         Relationship fridayRob = new Relationship( friday,rob, RelationshipStatus.SUBORDINATE);    //не меняй порядок
         Relationship jesusRob = new Relationship(jesus, rob, RelationshipStatus.SOULMATE);
+        System.out.println(friday);
+        rob.toBrewing();
         fridayRob.changeTopic();
         rob.toChangeState(CharacterState.STANDING);
         rob.toChangeState(CharacterState.WALKING);
@@ -59,7 +61,7 @@ public class Start {
         rob.toPray();
         World.setCurrSeason(Season.SPRING);
         friday.cleanUp();
-
+        System.out.println(friday);
 
     }
 }

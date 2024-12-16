@@ -1,6 +1,7 @@
 package classes;
 
 import abstractclasses.Person;
+import enums.Season;
 import interfaces.Teacher;
 import java.util.Random;
 
@@ -13,9 +14,12 @@ public final class Mentor extends Person implements Teacher {
 
     @Override
     public void toBrewing() {
+        if (World.getCurrSeason()!= Season.WINTER){
         Random random = new Random();
         this.setSoul(this.getSoul() + random.nextInt(-1,2));
-        System.out.print("Робинзон сварил пиво.");
+        this.setSatiety(this.getSatiety()+1);
+        System.out.print("Робинзон сварил пиво. ");}
+        else System.out.println("Зимой нельзя варить пиво(. ");
     }
 
     public void toEnjoyLife(){
