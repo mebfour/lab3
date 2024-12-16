@@ -26,7 +26,6 @@ public interface God {
      * -Таки здесь я - отвечает Изя
      * -Тогда таки почему на кухне свет горит?
      */
-    public static void createOcean() {};
     public static void toBeWitness(){
         System.out.print("Бог свидетель: ");
     }

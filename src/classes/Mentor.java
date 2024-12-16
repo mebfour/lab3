@@ -7,13 +7,9 @@ import java.util.Random;
 import static records.Story.*;
 
 public final class Mentor extends Person implements Teacher {
-
-
     public Mentor(String name, int soul, int satiety) {
         super(name, soul, satiety);
     }
-
-
 
     @Override
     public void toBrewing() {
@@ -46,11 +42,11 @@ public final class Mentor extends Person implements Teacher {
         result += (int) n/2;
         switch (n){
             case 1 -> {
-                System.out.print("В продолжение беседы разговор заходит" + getproSermons(n)+ ". "); //лямбда-оператор делает автобрейк
+                System.out.print("В продолжение беседы разговор заходит" + getProSermons(n)+ ". "); //лямбда-оператор делает автобрейк
                 result+=n;
             }
             case 2-> {
-                System.out.print("В продолжение беседы разговор заходит" + getproSermons(n)+ ". ");
+                System.out.print("В продолжение беседы разговор заходит" + getProSermons(n)+ ". ");
                 result+=n;
             }
         }

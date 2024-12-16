@@ -15,36 +15,33 @@ public final class Apprentice extends Person implements Student {
     public Apprentice(String name, int soul, int satiety) {
         super(name, soul, satiety);
     }
-    private static boolean studystatus = false;
+    private static boolean studyStatus = false;
     public int toStudy(){           //бафаем душу
         Random random = new Random();
         int randomNumber = random.nextInt(8);
-        //Story theme = new Story();
         System.out.print("Наставник " + getThemes(randomNumber));
-        studystatus = true;
+        studyStatus = true;
         return (int) randomNumber/2;
     }
 
     @Override
     public void toReflect() {
         System.out.print(this.getName() + " размышляет о Боге. ");
-        if (studystatus) {
+        if (studyStatus) {
             if (this.getSoul() < 9) this.setSoul(this.getSoul() + toStudy());
-            studystatus = false;
+            studyStatus = false;
         }
     }
 
     @Override
-    public void cleanUp(Season s) {
+    public void cleanUp() {
         System.out.print(this.getName() );
+        Season s = World.getCurrSeason();
         switch (s){
             case WINTER -> System.out.print(" чистит снег.");
             case SPRING, AUTUMN -> System.out.print(" убирает листья. ");
             case SUMMER -> System.out.print(" подметает пыль. ");
         }
     }
-
-    ;
-
 }
 

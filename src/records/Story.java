@@ -27,7 +27,7 @@ public record Story() {
     public static String getSermons(int n){
         return sermons[n];
     }
-    public static String getproSermons(int n){
+    public static String getProSermons(int n){
         Random n1 = new Random();
         return prosermons[n][n1.nextInt(2)];
     }

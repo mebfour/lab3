@@ -10,12 +10,10 @@ public enum CharacterState {
 
     private final String description;
 
-    // Конструктор для описания состояния
     CharacterState(String description) {
         this.description = description;
     }
 
-    // Метод для получения описания состояния
     public String getDescription() {
         return description;
     }

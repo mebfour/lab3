@@ -3,7 +3,7 @@ package classes;
 import enums.Season;
 
 public class World {
-    public static Relationship fridayRob;
+
     private static Season currSeason;
     private static int currYear = 0;
 
