@@ -3,7 +3,7 @@ package records;
 import java.util.Random;
 
 public record Story() {
-    final public static String[] themes = {"учить опасению Дикаря",
+    final private static String[] themes = {"учить опасению Дикаря",
             "вдохновить духом сердце этого жалкого невежественного создания",
             "даровал Дикарю свет познания бога во Христе",
             "обратить Дикаря к себе",
@@ -14,13 +14,14 @@ public record Story() {
     public static String getThemes(int n){
         return themes[n];
     }
-    final public static String[] sermons = {
+    final private static String[] sermons = {
             " об Искуплении человека спасителем мира",  //0
             " об Учении Евангелия, возвещенного с неба",//1
             " о том, почему наш искупитель не принял ангельского облика",//2
             " о том, почему наш искупитель произошел от семени Авраамова"//3 (2.1)
     };
-    final public static String[][] prosermons = {{""},
+    final private static String[][] proSermons = {{""},
+
             {" о раскаянии перед богом", " о вере в нашего всеблагого господа Иисуса"},  //1
             {" о том, почему падшие ангелы не могут надеяться на спасение", " о том, что Он пришел только для того, чтобы спасти погибших овец дома Израилева"}//2
     };
@@ -29,6 +30,6 @@ public record Story() {
     }
     public static String getProSermons(int n){
         Random n1 = new Random();
-        return prosermons[n][n1.nextInt(2)];
+        return proSermons[n][n1.nextInt(2)];
     }
 }
