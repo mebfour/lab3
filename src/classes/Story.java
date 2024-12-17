@@ -1,8 +1,8 @@
-package records;
+package classes;
 
 import java.util.Random;
 
-public record Story() {
+public class Story {
     final private static String[] themes = {"учить опасению Дикаря",
             "вдохновить духом сердце этого жалкого невежественного создания",
             "даровал Дикарю свет познания бога во Христе",

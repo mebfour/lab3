@@ -14,12 +14,9 @@ public abstract class Person {
 
     public Person(String name, int soul, int satiety){
 
-        try{
+
         if ((!(0<=soul && soul<=100))){
             throw new IllegalArgumentException("Душа должна принимать значения на отрезке [0; 10].");
-        }} catch (IllegalArgumentException e){
-            System.out.println("Так низя, потому что " + e.getMessage());
-            System.exit(33);
         }
         this.setName(name);
         this.setSoul(soul);
@@ -27,7 +24,7 @@ public abstract class Person {
     }
 
     public void setName(String name) { this.name = name; }
-
+    public abstract void toEnjoyLife();
     public void setSoul(int soul) {this.soul = soul;}
     public void setSatiety(int satiety) {this.satiety = satiety;}
     public void setCharacterState(CharacterState characterState){this.characterState = characterState;}
@@ -53,15 +50,15 @@ public abstract class Person {
     }
 
     @Override
-    public int hashCode(){return 10*super.hashCode();}
+    public int hashCode(){return 31*super.hashCode();}
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Person)) {return false;}
+        if (!(obj instanceof Person person)) {return false;}
         else{
             /*&& this.satiety == ((Person) obj).satiety)*/
             //мы не смотрим на голод, потому что неэтично
-            return (Objects.equals(this.getName(), ((Person) obj).getName()))
+            return (Objects.equals(this.getName(), person.getName()))
                     && (this.getSoul() == ((Person) obj).getSoul());
 
         }

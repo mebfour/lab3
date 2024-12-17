@@ -3,9 +3,11 @@ package classes;
 import abstractclasses.Person;
 import enums.Season;
 import interfaces.Teacher;
+import records.Beer;
+
 import java.util.Random;
 
-import static records.Story.*;
+import static classes.Story.*;
 
 public final class Mentor extends Person implements Teacher {
     public Mentor(String name, int soul, int satiety) {
@@ -13,17 +15,17 @@ public final class Mentor extends Person implements Teacher {
     }
 
     @Override
-    public void toBrewing() {
+    public void toBrewing(Beer b) {
         if (World.getCurrSeason()!= Season.WINTER){
         Random random = new Random();
         this.setSoul(this.getSoul() + random.nextInt(-1,2));
         this.setSatiety(this.getSatiety()+1);
-        System.out.print("Робинзон сварил пиво. ");}
+        System.out.print("Робинзон сварил " + b.type() + " пиво. ");}
         else System.out.println("Зимой нельзя варить пиво(. ");
     }
 
     public void toEnjoyLife(){
-        System.out.print("Горе Робинзона смягчалось, жилище стало казаться ему необыкновенно уютным. ");
+        System.out.print("Горе " + this.getName()+ " смягчалось, жилище стало казаться ему необыкновенно уютным. ");
     };
 
 

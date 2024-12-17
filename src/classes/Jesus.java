@@ -10,6 +10,11 @@ public class Jesus extends Person implements God {
         super("Иисус", 10, 10);
     }
 
+    @Override
+    public void toEnjoyLife() {
+
+    }
+
 
     //
 }

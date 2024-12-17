@@ -6,7 +6,7 @@ import enums.Season;
 import interfaces.Student;
 import java.util.Random;
 
-import static records.Story.*;
+import static classes.Story.*;
 
 
 
@@ -15,6 +15,12 @@ public final class Apprentice extends Person implements Student {
     public Apprentice(String name, int soul, int satiety) {
         super(name, soul, satiety);
     }
+
+    @Override
+    public void toEnjoyLife() {
+        System.out.println(this.getName()  + " наслаждается жизнью. ");
+    };
+
     private static boolean studyStatus = false;
     public int toStudy(){           //бафаем душу
         Random random = new Random();

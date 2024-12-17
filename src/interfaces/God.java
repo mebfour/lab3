@@ -13,7 +13,7 @@ public interface God {
      * -Тогда таки почему на кухне свет горит?
      */
 
-    public static String toMagic(String water) {
+     static String toMagic(String water) {
         return "Вода превращается в вино. ";
     }
     /**

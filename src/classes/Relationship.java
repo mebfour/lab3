@@ -7,7 +7,7 @@ import enums.RelationshipStatus;
 
 import java.util.Random;
 
-import static records.Story.getThemes;
+import static classes.Story.getThemes;
 
 
 public class Relationship {
